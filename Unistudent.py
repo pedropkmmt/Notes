@@ -248,6 +248,15 @@ def display_ai_chat(client):
     # Chat history with LaTeX rendering
     st.divider()
     chat_container = st.container(height=75)
+    st.markdown("""
+    <style>
+    .element-container:has(div[data-testid="stVerticalBlock"]:last-of-type) {
+        overflow-y: auto;
+        max-height: 400px;
+    }
+    .math-display .katex { font-size: 1.4em; }
+    </style>
+    """, unsafe_allow_html=True)
     with chat_container:
         if not st.session_state.messages:
             st.info("👋 Hi there! I'm your AI study assistant. How can I help you today?")
