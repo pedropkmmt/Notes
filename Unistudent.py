@@ -247,7 +247,7 @@ def display_ai_chat(client):
     
     # Chat history with LaTeX rendering
     st.divider()
-    chat_container = st.container(height=400, className="math-display")
+    chat_container = st.container(height=75)
     with chat_container:
         if not st.session_state.messages:
             st.info("👋 Hi there! I'm your AI study assistant. How can I help you today?")
