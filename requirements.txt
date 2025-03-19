@@ -3,3 +3,8 @@ streamlit-drawable-canvas
 pillow 
 pandas 
 groq
+gtts
+opencv-python 
+pytesseract 
+pillow 
+numpy
