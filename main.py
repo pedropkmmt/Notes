@@ -13,6 +13,7 @@ from notes_module import display_notes_main, display_notes_sidebar
 from exam_module import exam_interface
 from datetime import datetime
 import streamlit.components.v1 as components
+from auth_module import display_login_page, logout  # Import login functionality
 
 # Load environment variables
 load_dotenv()
@@ -35,22 +36,27 @@ def initialize_session_state():
         st.session_state.current_tab = "Whiteboard"
     if 'prompt_suggestion' not in st.session_state:
         st.session_state.prompt_suggestion = None
+    if 'logged_in' not in st.session_state:
+        st.session_state.logged_in = False
+    if 'username' not in st.session_state:
+        st.session_state.username = None
+
+def setup_mermaid_support():
+    """Add support for Mermaid diagrams in Streamlit"""
+    components.html(
+        """
+        <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+        <script>
+            mermaid.initialize({startOnLoad: true});
+            document.addEventListener('DOMContentLoaded', function() {
+                mermaid.init(undefined, document.querySelectorAll('.mermaid'));
+            });
+        </script>
+        """,
+        height=0,
+    )
 
 def main():
-    def setup_mermaid_support():
-        """Add support for Mermaid diagrams in Streamlit"""
-        components.html(
-            """
-            <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-            <script>
-                mermaid.initialize({startOnLoad: true});
-                document.addEventListener('DOMContentLoaded', function() {
-                    mermaid.init(undefined, document.querySelectorAll('.mermaid'));
-                });
-            </script>
-            """,
-            height=0,
-        )
     if not os.getenv("GROQ_API_KEY"):
         st.error("GROQ_API_KEY not found in environment variables. Please check your .env file.")
         return
@@ -58,17 +64,27 @@ def main():
     # Set up the page with a consistent theme
     set_page_config()
     
-    # Initialize Groq client
-    client = initialize_groq()
-    
     # Initialize session state
     initialize_session_state()
+
+    # Check if user is logged in
+    if not st.session_state.logged_in:
+        display_login_page()
+        return
+
+    # Initialize Groq client
+    client = initialize_groq()
 
     # App header with logo and title
     display_header()
 
-    # Navigation sidebar
+    # Logout button in sidebar
     with st.sidebar:
+        st.caption(f"Logged in as: {st.session_state.username}")
+        if st.button("Logout"):
+            logout()
+            return
+        
         display_navigation_sidebar()
         
         # Only show notes sidebar if on Notes tab
@@ -89,5 +105,6 @@ def main():
     st.divider()
     st.caption("© 2025 YourNote - Your AI Study Partner")
     setup_mermaid_support()
+
 if __name__ == "__main__":
     main()
