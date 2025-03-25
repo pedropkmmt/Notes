@@ -13,7 +13,7 @@ from notes_module import display_notes_main, display_notes_sidebar
 from exam_module import exam_interface
 from datetime import datetime
 import streamlit.components.v1 as components
-from auth_module import display_login_page, logout  # Import login functionality
+from auth_module import display_login_page, logout  
 
 # Load environment variables
 load_dotenv()
