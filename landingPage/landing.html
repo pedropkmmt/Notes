@@ -4,252 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Note - AI-Powered Learning Platform</title>
-    <style>
-        :root {
-            --primary-color: #000000;
-            --secondary-color: #2ecc71;
-            --background-color: #f4f6f7;
-            --text-color: #2c3e50;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--background-color);
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-
-        /* Header */
-        header {
-            background-color: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary-color);
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-
-        .nav-links li {
-            margin-left: 20px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-color);
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-
-        .cta-button {
-            background-color: rgb(58, 58, 247);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background-color: #2980b9;
-        }
-
-        /* Hero Section */
-        .hero {
-            display: flex;
-            align-items: center;
-            min-height: 100vh;
-            padding-top: 80px;
-        }
-
-        .hero-content {
-            flex: 1;
-        }
-
-        .hero-content h1 {
-            font-size: 3rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
-
-        .hero-image {
-            flex: 1;
-            text-align: right;
-        }
-
-        .hero-image img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        /* Features Section */
-        .features {
-            background-color: white;
-            padding: 4rem 0;
-            text-align: center;
-        }
-
-        .features-grid {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 2rem;
-        }
-
-        .feature {
-            flex: 1;
-            padding: 1rem;
-            margin: 0 15px;
-            background-color: var(--background-color);
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .feature:hover {
-            transform: translateY(-10px);
-        }
-
-        .feature img {
-            max-width: 90%;
-            margin-bottom: 1rem;
-        }
-
-        /* About Section */
-        .about {
-            padding: 4rem 0;
-            background-color: var(--background-color);
-        }
-
-        .about-content {
-            display: flex;
-            align-items: center;
-        }
-
-        .about-text {
-            flex: 2;
-            padding-right: 2rem;
-        }
-
-        .team-links {
-            margin-top: 1rem;
-        }
-
-        .team-links a {
-            margin-right: 15px;
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero, .about-content, .features-grid {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .hero-image {
-                margin-top: 2rem;
-                text-align: center;
-            }
-
-            .about-text {
-                padding-right: 0;
-            }
-
-            .feature {
-                margin: 15px 0;
-            }
-        }
-        .image-modal {
-            display: none;
-            position: fixed;
-            z-index: 1001;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.9);
-            align-items: center;
-            justify-content: center;
-        }
-
-        .image-modal-content {
-            max-width: 90%;
-            max-height: 90%;
-            display: block;
-            margin: auto;
-            animation: zoom 0.6s;
-        }
-
-        .image-modal-close {
-            position: absolute;
-            top: 15px;
-            right: 35px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .feature img {
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .feature img:hover {
-            transform: scale(1.05);
-        }
-
-        @keyframes zoom {
-            from {transform:scale(0)}
-            to {transform:scale(1)}
-        }
-
-        @media (max-width: 768px) {
-            .image-modal-close {
-                top: 10px;
-                right: 10px;
-                font-size: 30px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -258,7 +13,7 @@
             <ul class="nav-links">
                 <li><a href="#features">Features</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#" class="cta-button">Launch App</a></li>
+                <li><a href="https://github.com/pedropkmmt/Notes" class="cta-button">Launch App</a></li>
             </ul>
         </div>
     </header>
@@ -267,7 +22,7 @@
         <div class="hero-content">
             <h1>Your Note</h1>
             <p>An AI-powered platform that helps students understand their studies better</p>
-            <a href="#" class="cta-button">Get Started</a>
+            <a href="https://github.com/pedropkmmt/Notes" class="cta-button">Get Started</a>
         </div>
         <div class="hero-image">
             <img src="page.jpeg" alt="Your Note Platform Screenshot">
@@ -303,14 +58,11 @@
                 <p>This project is my Portfolio Project for ALX, representing a solution to personalized learning challenges in education.</p>
                 <div class="team-links">
                     <h3>Project Links</h3>
-                    <a href="#">LinkedIn</a>
-                    <a href="#">GitHub</a>
-                    <a href="#">Twitter</a>
-                    <a href="#">Project Repository</a>
+                    <a href="https://www.linkedin.com/in/pedro-muttenda-944834225/">LinkedIn</a>
+                    <a href="https://github.com/pedropkmmt">GitHub</a>
+                    <a href="https://x.com/PKNation646040">Twitter</a>
+                    <a href="https://github.com/pedropkmmt/Notes">Project Repository</a>
                 </div>
-            </div>
-            <div class="hero-image">
-                <img src="/api/placeholder/400/400" alt="Founder">
             </div>
         </div>
     </section>
@@ -321,41 +73,6 @@
         <img class="image-modal-content" id="modalImage" src="" alt="Enlarged Image">
     </div>
 
-    <script>
-        // Image Modal Functionality
-        document.addEventListener('DOMContentLoaded', () => {
-            const modal = document.getElementById('imageModal');
-            const modalImg = document.getElementById('modalImage');
-            const closeBtn = document.querySelector('.image-modal-close');
-            const featureImages = document.querySelectorAll('.feature img');
-
-            
-            featureImages.forEach(img => {
-                img.addEventListener('click', () => {
-                    modal.style.display = 'flex';
-                    modalImg.src = img.src;
-                });
-            });
-
-       
-            closeBtn.addEventListener('click', () => {
-                modal.style.display = 'none';
-            });
-
-       
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) {
-                    modal.style.display = 'none';
-                }
-            });
-
-          
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && modal.style.display === 'flex') {
-                    modal.style.display = 'none';
-                }
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
