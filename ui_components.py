@@ -51,7 +51,7 @@ def display_navigation_sidebar():
     st.session_state.current_tab = selected_tab
     
     st.divider()
-    
+
     # Add a help section at the bottom
     with st.expander("❓ Help & Tips"):
         st.markdown("""
