@@ -83,7 +83,7 @@ def exam_interface():
     
     # Create simple exam interface
     st.subheader("Create or Take Exams")
-    
+
     exam_options = ["Create New Exam", "Take Practice Exam", "Review Previous Exams"]
     selected_option = st.selectbox("Select an option:", exam_options)
     
