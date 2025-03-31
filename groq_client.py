@@ -13,7 +13,7 @@ def get_ai_response(client, prompt, system_message="You are a helpful AI assista
                          "derivative", "calculus", "algebra", "theta", "alpha", "beta", "gamma"]
         
         is_math_related = any(keyword in prompt.lower() for keyword in math_keywords)
-        
+
         if is_math_related:
             # Add special instruction for mathematical content display
             system_message += " If the user asks about mathematical concepts, display equations and symbols using LaTeX for proper formatting."
