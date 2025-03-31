@@ -10,7 +10,6 @@ from study_materials import (
     generate_mind_map,
     generate_diagram
 )
-
 # Import the new text-to-speech functionality
 from text_to_speech import add_text_to_speech_to_notes
 
