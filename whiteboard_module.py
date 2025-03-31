@@ -223,7 +223,7 @@ def display_whiteboard():
                 with st.spinner("Analyzing diagram..."):
                     system_message = f"""You are a visual content analyst specializing in {subject_area} diagrams.
                     For the user's {diagram_type}, please provide:
-                    
+                
                     1. An explanation of what this type of diagram typically represents in {subject_area}
                     2. The key components that should be present in this type of diagram
                     3. How to effectively use this type of visualization for learning or communication
