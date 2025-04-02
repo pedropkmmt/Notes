@@ -1,3 +1,4 @@
+##Project Name
 # Your Note 🚀
 ![Screenshot_19-3-2025_192055_localhost](https://github.com/user-attachments/assets/629e7eeb-1f54-4ffb-80d7-1279aa7f13d4)
 ##AUTHORS
@@ -9,7 +10,7 @@ https://docs.google.com/document/d/15O34EfPjfC2h1lFSssFb1iwewh5W_vSeCqrYc3Y2NTc/
 
 https://polite-cajeta-1eb67d.netlify.app
 
-## Overview
+## Introduction
 
 Your Note is an AI-powered platform designed to help students understand their studies better by providing personalized learning support through advanced AI technologies.
 
