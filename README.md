@@ -1,5 +1,11 @@
 # Your Note 🚀
 ![Screenshot_19-3-2025_192055_localhost](https://github.com/user-attachments/assets/629e7eeb-1f54-4ffb-80d7-1279aa7f13d4)
+##AUTHORS
+https://www.linkedin.com/in/pedro-muttenda-944834225
+
+##Article and Landing Page
+https://docs.google.com/document/d/15O34EfPjfC2h1lFSssFb1iwewh5W_vSeCqrYc3Y2NTc/edit?usp=sharing
+https://polite-cajeta-1eb67d.netlify.app
 
 ## Overview
 
