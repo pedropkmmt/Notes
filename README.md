@@ -14,7 +14,7 @@ https://polite-cajeta-1eb67d.netlify.app
 
 Your Note is an AI-powered platform designed to help students understand their studies better by providing personalized learning support through advanced AI technologies.
 
-##Installation
+# Installation
 
 To install all the required dependencies for your project, you can use the following command:  
 
